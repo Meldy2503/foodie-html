@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about Foodie, the app designed to connect food lovers with the best restaurants and chefs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Foodie - about us page</title>
+  </head>
+  <body>
+    <!-- page loading spinner -->
+    <div
+      id="spinner"
+      class="fixed top-0 left-0 w-full h-full bg-secondary flex justify-center items-center z-[9999]"
+    >
+      <div class="w-24 md:w-32">
+        <image src="../assets/images/loading.gif" alt="page loading spinner" />
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-secondary fixed top-0 w-full z-50">
+      <nav
+        class="flex justify-between items-center py-6 max-w-[1280px] w-[90%] m-auto"
+      >
+        <a href="../pages/index.html">
+          <div class="flex gap-2 items-center">
+            <div class="w-[3.5rem] md:w-[4rem]">
+              <img
+                src="../assets/images/foodie-logo.svg"
+                alt="foodie app logo image"
+              />
+            </div>
+            <p class="expletus-sans-bold text-4xl">foodie</p>
+          </div>
+        </a>
+        <div
+          class="nav-menu bg-secondary lg:bg-inherit w-[65%] flex items-center justify-between n py-10 lg:py-0"
+        >
+          <ul class="flex flex-col lg:flex-row gap-8 lg:gap-14">
+            <li><a class="nav-link" href="../pages/about.html">About Us</a></li>
+            <li>
+              <a class="nav-link" href="../pages/pricing.html">Pricing</a>
+            </li>
+            <li>
+              <a class="nav-link" href="../pages/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 n py-10 lg:py-0">
+            <a
+              href="../pages/login.html"
+              class="expletus-sans-regular text-[1.45rem] px-10 py-2 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Login
+            </a>
+            <a
+              href="../pages/register.html"
+              class="expletus-sans-regular text-[1.45rem] px-8 lg:px-5 py-2 border-[1.5px] text-white border-primary bg-primary rounded-full transition-all duration-300 ease-in-out hover:bg-secondary hover:text-primary"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section class="bg-secondary">
+        <div
+          class="flex flex-col items-start md:flex-row justify-between gap-6 max-w-[1280px] w-[90%] mx-auto pt-40 pb-8"
+        >
+          <div class="w-full md:w-[48%] pt-8 lg:pt-14">
+            <p
+              class="animate__animated animate__bounceInLeft animate__delay-1s animate__repeat-1 font-semibold text-2xl"
+            >
+              ABOUT US
+            </p>
+            <h1
+              class="animate__animated animate__bounceInLeft animate__delay-2s animate__repeat-1  expletus-sans-bold text-[3rem] lg:text-[4rem] leading-tight my-6"
+            >
+              Foodie is taking charge of the market space one move at a time.
+            </h1>
+            <p class=" animate__animated animate__bounceInLeft animate__delay-3s animate__repeat-1 w-full md:w-[90%]">
+              Our &CloseCurlyQuote;brand role&CloseCurlyQuote; is a simple and
+              powerful statement that guides everything we do. Including how we
+              look, think and talk to the world.
+            </p>
+
+            <div
+              class="animate__animated animate__bounceInLeft animate__delay-4s animate__repeat-1  flex gap-6 mt-16 items-center text-[1.3rem] sm:text-[1.5rem]"
+            >
+              <div class="w-[15rem]">
+                <image
+                  src="../assets/images/home-hero-sub-img.webp"
+                  alt="image of happy foodie customers"
+                />
+              </div>
+              <div>
+                <h2 class="expletus-sans-bold">Our Happy Restaurant Owners</h2>
+                <p>(12.5k Review)</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-[48%]">
+            <image
+              src="../assets/images/about-hero-img.webp"
+              alt="image of a chef"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- foodie vision and mission section -->
+      <section class="max-w-[1280px] w-[90%] mx-auto pt-28 md:pt-40 pb-8">
+        <div
+          class="flex flex-col-reverse items-center md:flex-row justify-between gap-10"
+        >
+          <div class="w-full md:w-[47%]">
+            <image
+              src="../assets/images/about-mission.webp"
+              alt="image of a man eating in a restaurant"
+            />
+          </div>
+          <div class="animate__animated animate__fadeInUp animate__delay-4s animate__repeat-1   w-full md:w-[47%]">
+            <p class="font-semibold text-2xl">FOODIE STORY</p>
+            <h2
+              class="expletus-sans-bold text-[3rem] lg:text-[3.5rem] leading-tight my-6"
+            >
+              We started small just like you
+            </h2>
+            <p class="w-full md:w-[90%]">
+              Our &CloseCurlyQuote;brand role&CloseCurlyQuote; is a simple and
+              powerful statement that guides everything we do. Including how we
+              look, think and talk to the world. Our &CloseCurlyQuote;brand
+              role&CloseCurlyQuote; is a simple and powerful statement that
+              guides everything we do. Including how we look, think and talk to
+              the world. Our brand role is a simple and powerful statement that
+              guides everything we do. Including how we look, think and talk to
+              the world.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col items-center md:flex-row justify-between gap-10 pt-28"
+        >
+          <div class="w-full md:w-[47%]">
+            <p class="font-semibold text-2xl">OUR VISION</p>
+            <h2
+              class="expletus-sans-bold text-[3rem] lg:text-[3.5rem] leading-tight my-6"
+            >
+              Simplifying Business
+            </h2>
+            <p class="w-full md:w-[90%]">
+              Our &CloseCurlyQuote;brand role&CloseCurlyQuote; is a simple and
+              powerful statement that guides everything we do. Including how we
+              look, think and talk to the world. Our &CloseCurlyQuote;brand
+              role&CloseCurlyQuote; is a simple and powerful statement that
+              guides everything we do. Including how we look, think and talk to
+              the world. Our brand role is a simple and powerful statement that
+              guides everything we do. Including how we look, think and talk to
+              the world.
+            </p>
+          </div>
+          <div class="w-full md:w-[47%]">
+            <image
+              src="../assets/images/about-vision.webp"
+              alt="image of different dishes on a table"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- foodie teams section -->
+      <section class="max-w-[1280px] w-[90%] mx-auto py-20 md:py-40">
+        <div
+          class="flex flex-col-reverse items-center lg:flex-row justify-between gap-10"
+        >
+          <div class="w-full lg:w-[45%]">
+            <image
+              src="../assets/images/about-team.webp"
+              alt="image of different hands joined together"
+              class="about-img"
+            />
+          </div>
+          <div class="w-full lg:w-[50%]">
+            <h2
+              class="expletus-sans-bold text-[3rem] lg:text-[3.5rem] leading-tight mb-6"
+            >
+              We are One in All
+            </h2>
+            <div
+              class="flex flex-wrap flex-col md:flex-row justify-between gap-x-6 gap-y-10 mt-10"
+            >
+              <div class="w-full md:w-[45%]">
+                <h3
+                  class="expletus-sans-bold text-[2rem] lg:text-[2.3rem] mb-4"
+                >
+                  Commissions
+                </h3>
+                <p>
+                  Earn an average of $58 for each user who signs up for a paid
+                  plan with your unique referral link. To maximize your
+                  earnings, each referral will be nurtured to help them
+                  transition from trial to paid plan.
+                </p>
+              </div>
+              <div class="w-full md:w-[45%]">
+                <h3
+                  class="expletus-sans-bold text-[2rem] lg:text-[2.3rem] mb-4"
+                >
+                  Support
+                </h3>
+                <p>
+                  Get priority foodie Partner support at any time via phone,
+                  email, or live chat. You&CloseCurlyQuote;ll get access to
+                  partner education and key product information to help you
+                  convert your referral traffic.
+                </p>
+              </div>
+              <div class="w-full md:w-[45%]">
+                <h3
+                  class="expletus-sans-bold text-[2rem] lg:text-[2.3rem] mb-4"
+                >
+                  Content
+                </h3>
+                <p>
+                  Save time and money on content creation by linking to blogs,
+                  webinars, video tutorials, tools, and automated funnels
+                  developed by foodie for your audience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- cta section -->
+      <section
+        class="max-w-[1280px] w-[90%] mx-auto text-center pb-28 lg:pb-40"
+      >
+        <p class="font-semibold text-2xl">TEAM SPIRIT</p>
+        <h2
+          class="expletus-sans-bold text-[3rem] lg:text-[3.5rem] leading-tight my-6"
+        >
+          A winning mentality
+        </h2>
+        <p class="w-full md:w-[80%] lg:w-[55%] mx-auto mb-14">
+          Our &CloseCurlyQuote;brand role&CloseCurlyQuote; is a simple and
+          powerful statement that guides everything we do. Including how we
+          look, think and talk to the world. Our brand role is a simple and
+          powerful statement that guides everything we do. Including how we
+          look, think and talk to the world. Our brand role is a simple and
+          powerful statement that guides everything we do. Including how we
+          look, think and talk to the world.
+        </p>
+        <a
+          href="../pages/register.html"
+          class="slidebtn slidebtn2 expletus-sans-medium text-[1.6rem] px-12 py-3 rounded-full"
+        >
+          Join Now
+        </a>
+      </section>
+    </main>
+
+    <!-- Placeholder for Footer -->
+    <footer id="footer"></footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

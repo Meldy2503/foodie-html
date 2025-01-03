@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Check out Foodie's affordable pricing plans. Choose the best option for your restaurant and start selling effortlessly"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Foodie - pricing page</title>
+  </head>
+  <body>
+    <!-- page loading spinner -->
+    <div
+      id="spinner"
+      class="fixed top-0 left-0 w-full h-full bg-secondary flex justify-center items-center z-[9999]"
+    >
+      <div class="w-24 md:w-32">
+        <image src="../assets/images/loading.gif" alt="page loading spinner" />
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-tetiary fixed top-0 w-full z-50">
+      <nav
+        class="flex justify-between items-center py-6 max-w-[1280px] w-[90%] m-auto"
+      >
+        <a href="../pages/index.html">
+          <div class="flex gap-2 items-center">
+            <div class="w-[3.5rem] md:w-[4rem]">
+              <img
+                src="../assets/images/foodie-logo.svg"
+                alt="foodie app logo image"
+              />
+            </div>
+            <p class="expletus-sans-bold text-4xl">foodie</p>
+          </div>
+        </a>
+        <div
+          class="nav-menu bg-tetiary lg:bg-inherit w-[65%] flex items-center justify-between n py-10 lg:py-0"
+        >
+          <ul class="flex flex-col lg:flex-row gap-8 lg:gap-14">
+            <li><a class="nav-link" href="../pages/about.html">About Us</a></li>
+            <li>
+              <a class="nav-link" href="../pages/pricing.html">Pricing</a>
+            </li>
+            <li>
+              <a class="nav-link" href="../pages/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 n py-10 lg:py-0">
+            <a
+              href="../pages/login.html"
+              class="expletus-sans-regular text-[1.45rem] px-10 py-2 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Login
+            </a>
+            <a
+              href="../pages/register.html"
+              class="expletus-sans-regular text-[1.45rem] px-8 lg:px-5 py-2 border-[1.5px] text-white border-primary bg-primary rounded-full transition-all duration-300 ease-in-out hover:bg-tetiary hover:text-primary"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section class="bg-tetiary">
+        <div class="max-w-[1280px] w-[90%] mx-auto py-28 md:py-40">
+          <h3 class="font-semibold text-center mb-5 mt-14">PRICING</h3>
+          <h4
+            class="expletus-sans-bold text-center text-[3rem] lg:text-[4rem] w-full md:w-[70%] xl:w-[60%] mx-auto leading-snug mb-16 md:mb-20"
+          >
+            Choose a plan that works for you
+          </h4>
+          <div
+            class="flex flex-wrap justify-center lg:justify-between items-center gap-8"
+          >
+            <div
+              class="bg-lightTetiary w-full sm:w-[47%] lg:w-[31%] rounded-3xl p-10"
+            >
+              <h5 class="expletus-sans-bold text-4xl mb-6">Basic foodie</h5>
+              <p class="w-[80%] sm:w-[60%]">
+                Best for online businesses new to in-person selling
+              </p>
+              <p class="expletus-sans-regular mt-12 flex justify-end items-end">
+                <span class="expletus-sans-bold text-5xl">$29/</span>mo
+              </p>
+            </div>
+            <div
+              class="bg-secondary w-full sm:w-[47%] lg:w-[31%] rounded-3xl p-10"
+            >
+              <div class="flex justify-between items-center">
+                <h5 class="expletus-sans-bold text-4xl mb-6">Foodie +</h5>
+                <span
+                  class="text-primary text-5xl bg-white rounded-full px-4 py-3"
+                >
+                  <i class="fa-solid fa-fire"></i>
+                </span>
+              </div>
+              <p class="w-[80%] sm:w-[60%]">
+                Best for growing businesses with 1 retail store
+              </p>
+              <p class="expletus-sans-regular mt-12 flex justify-end items-end">
+                <span class="expletus-sans-bold text-5xl">$79/</span>mo
+              </p>
+            </div>
+            <div
+              class="bg-lightPrimary w-full sm:w-[47%] lg:w-[31%] rounded-3xl p-10"
+            >
+              <h5 class="expletus-sans-bold text-4xl mb-6">Premium foodie</h5>
+              <p class="w-[80%] sm:w-[60%]">
+                Best for growing businesses with many retail stores
+              </p>
+              <p class="expletus-sans-regular mt-12 flex justify-end items-end">
+                <span class="expletus-sans-bold text-5xl">$129/</span>mo
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing table -->
+      <section class="max-w-[1280px] w-[90%] mx-auto py-28 md:py-40">
+        <div class="overflow-x-auto">
+          <table
+            class="w-[74.5rem] md:w-full border-1 border-[#d0d0d0] border-collapse text-center"
+          >
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  Basic foodie <br />
+                  $<span>29</span>/mo
+                </th>
+                <th>
+                  Foodie + <br />
+                  $<span>79</span>/mo
+                </th>
+                <th>
+                  Premium foodie <br />
+                  $<span>129</span>/mo
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr key="{data.id}">
+                <td>Features</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  Online Store <br />
+                  <span>Includes ecommerce website and blog</span>
+                </td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>Unlimited products<br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>24/7 support <br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>
+                  Locations<br />
+                  <span
+                    >Assign inventory to retail stores, warehouses, pop-ups, or
+                    wherever you store products</span
+                  >
+                </td>
+                <td>up to 2</td>
+                <td>up to 6</td>
+                <td>up to 10</td>
+              </tr>
+              <tr>
+                <td>Manual order creation <br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>Discount codes <br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>Abandoned cart recovery <br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>Gift cards <br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>Professional reports <br /></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+              <tr>
+                <td>
+                  Third-party calculated shipping rates <br />
+                  <span>
+                    Show calculated rates with your account or third-party apps
+                    at checkout</span
+                  >
+                </td>
+                <td></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- frequently asked questions section -->
+      <section class="max-w-[1280px] w-[90%] mx-auto pb-28 md:pb-44">
+        <h2
+          class="expletus-sans-bold text-[3rem] lg:text-[3.5rem] w-full md:w-[70%] mx-auto leading-snug text-center"
+        >
+          Millions of <span class="text-primary">restaurants</span> rely on our
+          domains and web hosting to get their ideas online.
+        </h2>
+        <h3 class="text-center text-4xl font-semibold my-12 md:my-16">
+          Frequently Asked Questions
+        </h3>
+        <div class="flex flex-wrap justify-between gap-16 md:gap-20">
+          <div class="w-full md:w-[45%]">
+            <h3 class="text-3xl font-semibold mb-5">
+              How does foodie help small business owners succeed?
+            </h3>
+            <p>
+              Foodie offers more than just a platform to build your food site,
+              we offer everything you need to create an effective, memorable
+              online presence. Already have a site? We offer menu setup plans
+              that will keep it fast, secure and online. Our professional themes
+              helps you build a professional image, while our online marketing
+              tools empower entrepreneurs to get online with an SEO-friendly
+              website. Foodie is an all-in-one solution provider to get your
+              idea online, backed with expert, personalized support from Foodie
+              tour.
+            </p>
+          </div>
+          <div class="w-full md:w-[45%]">
+            <h3 class="text-3xl font-semibold mb-5">Why use foodie builder?</h3>
+            <p>
+              Foodie offers more than just a platform to build your food site,
+              we offer everything you need to create an effective, memorable
+              online presence. Already have a site? We offer menu setup plans
+              that will keep it fast, secure and online. Our professional themes
+              helps you build a professional image, while our online marketing
+              tools empower entrepreneurs to get online with an SEO-friendly
+              website. Foodie is an all-in-one solution provider to get your
+              idea online, backed with expert, personalized support from Foodie
+              tour.
+            </p>
+          </div>
+          <div class="w-full md:w-[45%]">
+            <h3 class="text-3xl font-semibold mb-5">
+              Why do I need a website for my business?
+            </h3>
+            <p>
+              Foodie offers more than just a platform to build your food site,
+              we offer everything you need to create an effective, memorable
+              online presence. Already have a site? We offer menu setup plans
+              that will keep it fast, secure and online. Our professional themes
+              helps you build a professional image, while our online marketing
+              tools empower entrepreneurs to get online with an SEO-friendly
+              website. Foodie is an all-in-one solution provider to get your
+              idea online, backed with expert, personalized support from Foodie
+              tour.
+            </p>
+          </div>
+          <div class="w-full md:w-[45%]">
+            <h3 class="text-3xl font-semibold mb-5">
+              How can I customize my online restaurant on foodie?
+            </h3>
+            <p>
+              Foodie offers more than just a platform to build your food site,
+              we offer everything you need to create an effective, memorable
+              online presence. Already have a site? We offer menu setup plans
+              that will keep it fast, secure and online. Our professional themes
+              helps you build a professional image, while our online marketing
+              tools empower entrepreneurs to get online with an SEO-friendly
+              website. Foodie is an all-in-one solution provider to get your
+              idea online, backed with expert, personalized support from Foodie
+              tour.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder for Footer -->
+    <footer id="footer"></footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

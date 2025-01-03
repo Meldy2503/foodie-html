@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Foodie, your go-to platform for discovering and ordering meals from different local restaurants."
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Foodie - home page</title>
+  </head>
+  <body>
+    <!-- page loading spinner -->
+    <div
+      id="spinner"
+      class="fixed top-0 left-0 w-full h-full bg-secondary flex justify-center items-center z-[9999]"
+    >
+      <div class="w-24 md:w-32">
+        <image src="../assets/images/loading.gif" alt="page loading spinner" />
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="home-navbar" class="fixed top-0 w-full z-50">
+      <nav
+        class="flex justify-between items-center py-6 max-w-[1280px] w-[90%] m-auto"
+      >
+        <a href="../pages/index.html">
+          <div class="flex gap-2 items-center">
+            <div class="w-[3.5rem] md:w-[4rem]">
+              <img
+                src="../assets/images/foodie-logo.svg"
+                alt="foodie app logo image"
+              />
+            </div>
+            <p
+              class="logo-text expletus-sans-bold text-3xl md:text-4xl text-white"
+            >
+              foodie
+            </p>
+          </div>
+        </a>
+        <div
+          class="nav-menu min-[960px]:w-[48%] bg-lightTetiary lg:bg-inherit w-[65%] flex items-center justify-between py-14 lg:py-0"
+        >
+          <ul
+            class="flex flex-col lg:flex-row gap-8 lg:gap-14 text-black lg:text-white"
+          >
+            <li><a class="nav-link" href="../pages/about.html">About Us</a></li>
+            <li>
+              <a class="nav-link" href="../pages/pricing.html">Pricing</a>
+            </li>
+            <li>
+              <a class="nav-link" href="../pages/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 pt-8 lg:pt-0">
+            <a
+              href="../pages/login.html"
+              class="login-btn expletus-sans-regular text-[1.45rem] px-10 py-2 border-[1.5px] text-primary border-primary lg:text-white lg:border-white rounded-full"
+            >
+              Login
+            </a>
+            <a
+              href="../pages/register.html"
+              class="expletus-sans-regular text-[1.45rem] px-8 lg:px-5 py-2 border-[1.5px] text-white border-primary bg-primary rounded-full transition-all duration-300 ease-in-out hover:bg-lightTetiary hover:text-primary"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="hamburger">
+          <span class="bar homebar"></span>
+          <span class="bar homebar"></span>
+          <span class="bar homebar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="">
+      <!-- hero section -->
+      <section class="w-full mx-auto h-screen overflow-hidden relative">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom right;
+          "
+        >
+          <source src="../assets/videos/hero-video.mp4" type="video/mp4" />
+          <source src="../assets/videos/hero-video.webm" type="video/webm" />
+          Your browser is not supported!
+        </video>
+        <div
+          class="bg w-full h-full absolute top-0 right-0 z-10 flex items-center justify-center"
+        >
+          <div class="max-w-[1280px] w-[90%] mx-auto">
+            <div class="w-full md:w-[80%] lg:w-[55%] text-white mt-10">
+              <h1
+                class="animate__animated animate__lightSpeedInLeft animate__delay-1s animate__repeat-1 expletus-sans-bold text-[3rem] sm:text-[3.5rem] lg:text-[5rem]"
+              >
+                Simple and Efficient Commerce Solution for Restaurants and Chefs
+              </h1>
+              <p
+                class="animate__animated animate__lightSpeedInLeft animate__delay-2s animate__repeat-1 mt-4 mb-10 w-full md:w-[90%]"
+              >
+                Foodie helps restaurant grow by expanding your kitchen and
+                restaurant beyond your immediate reach, manage your own
+                personalized online restaurant and receive payments quickly.
+              </p>
+              <a
+                href="../pages/register.html"
+                class="animate__animated animate__lightSpeedInLeft animate__delay-3s animate__repeat-1 btn-slide expletus-sans-regular text-[1.6rem] px-12 py-4 bg-[#db1a3a] text-white rounded-full font-bold"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-1/2 h-0 absolute bottom-[0] right-0 border-b-[30px] md:border-b-[55px] border-b-white border-l-[30px] md:border-l-[55px] border-l-transparent z-10"
+        ></div>
+      </section>
+
+      <!-- customize store section -->
+      <section class="my-28 md:my-36 max-w-[1280px] w-[90%] mx-auto">
+        <h2
+          class="expletus-sans-bold text-center text-[3rem] lg:text-[4rem] w-full md:w-[70%] xl:w-[60%] mx-auto leading-snug mb-20"
+        >
+          Setting up an online <span class="text-primary">store</span>
+          is easier than you think
+        </h2>
+        <div class="relative">
+          <!-- Images Container -->
+          <div class="overflow-hidden relative">
+            <div
+              id="slider"
+              class="flex gap-2 transition-transform duration-300 ease-in-out"
+            >
+              <!-- Using placeholder images with different background colors for demonstration -->
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme1.webp"
+                  alt="simple foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme2.webp"
+                  alt="classic foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme3.webp"
+                  alt="premium foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme1.webp"
+                  alt="simple foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme2.webp"
+                  alt="premium foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme3.webp"
+                  alt="classic foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="min-w-full md:min-w-[47%] lg:min-w-[33%] px-2">
+                <img
+                  src="../assets/images/theme2.webp"
+                  alt="simple foodie theme image"
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button
+            aria-label="previous button"
+            onclick="slide('prev')"
+            class="absolute flex items-center justify-center right-24 bottom-[-5rem] bg-gray-100 px-4 py-3 rounded-full shadow-sm text-primary z-20"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button
+            aria-label="next button"
+            onclick="slide('next')"
+            class="absolute flex items-center justify-center right-4 bottom-[-5rem] bg-primary px-4 py-3 rounded-full shadow-sm text-white z-20"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- themes section -->
+      <section class="bg-primary py-40 my-10 text-white relative">
+        <div class="flex justify-between w-full">
+          <div
+            class="absolute top-[-1rem] left-0 right-0 mx-auto w-[80%] border-t-[40px] border-t-white border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent"
+          ></div>
+          <div
+            class="absolute bottom-[-1rem] left-0 right-0 mx-auto w-[80%] border-b-[40px] border-b-white border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent"
+          ></div>
+        </div>
+        <div class="max-w-[1280px] w-[90%] mx-auto">
+          <ol
+            class="flex justify-between gap-x-8 gap-y-16 items-center flex-wrap"
+          >
+            <li class="w-full md:w-[47%] lg:w-[30%]">
+              <h2 class="text-4xl expletus-sans-bold tracking-wider">
+                01. Select your theme
+              </h2>
+              <p class="pt-6 w-[92%] text-2xl">
+                Choose from a list of major themes covering every type of
+                business.
+              </p>
+            </li>
+            <li class="w-full md:w-[47%] lg:w-[30%]">
+              <h2 class="text-4xl expletus-sans-bold tracking-wider">
+                02. Tweak it to taste
+              </h2>
+              <p class="pt-6 w-[92%] text-2xl">
+                Change colors, fonts or the entire layout with just a click.
+              </p>
+            </li>
+            <li class="w-full md:w-[47%] lg:w-[30%]">
+              <h2 class="text-4xl expletus-sans-bold tracking-wider">
+                03. Go live and sell
+              </h2>
+              <p class="pt-6 w-[92%] text-2xl">
+                Use the integrated marketing tools to attract (and keep)
+                customers.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- steps to create platform section -->
+      <section class="my-28 md:my-36 max-w-[1280px] w-[90%] mx-auto">
+        <h2
+          class="expletus-sans-bold text-center text-[3rem] lg:text-[4rem] w-full md:w-[70%] xl:w-[50%] mx-auto leading-snug mb-20"
+        >
+          Create an <span class="text-primary">online</span> restaurant with few
+          clicks
+        </h2>
+
+        <div>
+          <div
+            id="task1"
+            class="task flex flex-col md:flex-row p-10 md:p-20 gap-6 justify-between bg-[#f2f2f2] rounded-[3rem] items-center lg:h-[45rem]"
+          >
+            <div class="task-body w-full md:w-[50%] lg:pl-6">
+              <h3 class="font-semibold">CREATE A STORE</h3>
+
+              <h4 class="expletus-sans-bold text-4xl md:text-5xl py-8">
+                Increase your online Presence
+              </h4>
+              <p>
+                Connect with your customers by creating a store on Foodie where
+                prospective clients can see what you offer, where and how you
+                operate.
+              </p>
+            </div>
+            <div class="w-full md:w-[45%] h-full">
+              <image
+                src="../assets/images/create-presence.webp"
+                alt="image of a chef cooking"
+                style="
+                  height: 100%;
+                  max-width: 100%;
+                  width: 100%;
+                  border-radius: 2rem;
+                "
+              />
+            </div>
+          </div>
+          <div
+            id="task2"
+            class="task flex flex-col md:flex-row-reverse p-10 md:p-20 gap-6 bg-[#fbf4f4] justify-between rounded-[3rem] items-center lg:h-[45rem]"
+          >
+            <div class="task-body w-full md:w-[50%] lg:pl-6">
+              <h3 class="font-semibold">SET LOCATION</h3>
+
+              <h4 class="expletus-sans-bold text-4xl md:text-5xl py-8">
+                Target your Audience
+              </h4>
+              <p>
+                Set your preferred target locations, determine how wide its
+                service area is, and design different menu offerings targeted at
+                various locations.
+              </p>
+            </div>
+            <div class="w-full md:w-[45%] h-full">
+              <image
+                src="../assets/images/target-audience.webp"
+                alt="image of people eating in a restaurant"
+                style="
+                  height: 100%;
+                  max-width: 100%;
+                  width: 100%;
+                  border-radius: 2rem;
+                  object-fit: cover;
+                "
+              />
+            </div>
+          </div>
+
+          <div
+            id="task2"
+            class="task flex flex-col md:flex-row p-10 md:p-20 gap-6 bg-[#f6f8fd] justify-between rounded-[3rem] items-center lg:h-[45rem]"
+          >
+            <div class="task-body w-full md:w-[50%] lg:pl-6">
+              <h3 class="font-semibold">START SELLING</h3>
+
+              <h4 class="expletus-sans-bold text-4xl md:text-5xl py-8">
+                Show what you&CloseCurlyQuote;ve got
+              </h4>
+              <p>
+                Instantly share your page URL across all channels, e.g.,
+                WhatsApp, Instagram, Facebook, Twitter, etc., and receive them
+                all in your Foodie account to help you drive clients - both new
+                and old - to your page for effective management of all incoming
+                orders.
+              </p>
+            </div>
+            <div class="w-full md:w-[45%] h-full">
+              <image
+                src="../assets/images/show-talent.webp"
+                alt="image of a chef showing his meal"
+                style="height: 100%; max-width: 100%; width: 100%"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- recommendation section -->
+      <section
+        class="flex flex-col-reverse items-start md:flex-row justify-between gap-y-36 gap-x-8 max-w-[1280px] w-[90%] mx-auto"
+      >
+        <div class="w-full md:w-[48%]">
+          <img src="../assets/images/review-image.webp" alt="image of a chef" />
+        </div>
+        <div class="w-full md:w-[48%] pt-8 lg:pt-14 relative">
+          <p class="font-semibold text-2xl text-primary">WHAT THEY SAY</p>
+          <h1
+            class="expletus-sans-bold text-[3rem] lg:text-[4rem] leading-tight my-6"
+          >
+            What our customers say about us
+          </h1>
+
+          <div
+            id="recommendation-slider"
+            class="overflow-hidden relative w-full h-auto"
+          >
+            <div class="flex transition-transform duration-300 w-full">
+              <div class="min-w-full">
+                <p>
+                  Foodie has completely transformed the way we do business. In
+                  just a year, our sales have doubled, and we&CloseCurlyQuote;ve
+                  gained so many loyal customers! The platform is incredibly
+                  intuitive, making it easy to manage orders, payments, and
+                  customer feedback. We&CloseCurlyQuote;ve never had such smooth
+                  operations before, and we&CloseCurlyQuote;re excited for
+                  what&CloseCurlyQuote;s next!
+                </p>
+                <div class="flex items-center mt-10 md:mt-20 gap-8">
+                  <img
+                    src="../assets/images/testimonial-2.webp"
+                    alt="image of a restaurant owner"
+                    style="
+                      border-radius: 50%;
+                      height: 6rem;
+                      width: 6rem;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <div>
+                    <p class="font-bold text-[1.8rem]">James Moore</p>
+                    <p class="text-[1.5rem] text-gray-500">
+                      Owner of Urban Bites
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-full">
+                <p>
+                  Thanks to Foodie, I&CloseCurlyQuote;ve been able to turn my
+                  passion for cooking into a thriving online restaurant
+                  business. The platform helped me design a professional menu,
+                  create an engaging shop theme, and handle payments
+                  effortlessly. Foodie&CloseCurlyQuote;s features are a
+                  lifesaver for chefs like me, who want to focus on food rather
+                  than logistics. Highly recommended for anyone in the food
+                  industry!
+                </p>
+                <div class="flex items-center mt-10 md:mt-20 gap-8">
+                  <img
+                    src="../assets/images/testimonial-3.webp"
+                    alt="image of a chef"
+                    style="
+                      border-radius: 50%;
+                      height: 6rem;
+                      width: 6rem;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <div>
+                    <p class="font-bold text-[1.8rem]">Sarah Johnson</p>
+                    <p class="text-[1.5rem] text-gray-500">
+                      Chef at Delish Cuisine
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-full">
+                <p>
+                  I&CloseCurlyQuote;ve been able to build something in three
+                  years that many brands haven&CloseCurlyQuote;t achieved in ten
+                  years, all thanks to Foodie! Their tools for customer
+                  management, marketing, and seamless transactions are
+                  unbeatable. What sets Foodie apart is how user-friendly it is,
+                  even for small business owners like me. It has truly taken my
+                  business to the next level.
+                </p>
+                <div class="flex items-center mt-10 md:mt-20 gap-8">
+                  <img
+                    src="../assets/images/testimonial-4.webp"
+                    alt="image of a small business owner"
+                    style="
+                      border-radius: 50%;
+                      height: 6rem;
+                      width: 6rem;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <div>
+                    <p class="font-bold text-[1.8rem]">Anita Patel</p>
+                    <p class="text-[1.5rem] text-gray-500">
+                      Owner of Spice Corner
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-full">
+                <p>
+                  Foodie&CloseCurlyQuote;s platform has given us the tools to
+                  reach a wider audience. The customization options helped us
+                  create a unique brand identity that stands out. Our customers
+                  love the seamless experience, from browsing our menu to paying
+                  for their orders. We couldn&CloseCurlyQuote;t be happier with
+                  the results, and the support team is fantastic. Foodie is
+                  truly a game-changer for businesses like ours!
+                </p>
+                <div class="flex items-center mt-10 md:mt-20 gap-8">
+                  <img
+                    src="../assets/images/testimonial-5.webp"
+                    alt="image of a team leader"
+                    style="
+                      border-radius: 50%;
+                      height: 6rem;
+                      width: 6rem;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <div>
+                    <p class="font-bold text-[1.8rem]">Michael Roberts</p>
+                    <p class="text-[1.5rem] text-gray-500">
+                      Team Leader at Freshly Served
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="min-w-full">
+                <p>
+                  With Foodie, we&CloseCurlyQuote;ve streamlined our operations
+                  and created a better customer experience. The platform has
+                  everything we need to succeed in today&CloseCurlyQuote;s
+                  competitive market. From rewards programs to personalized
+                  notifications, our customers feel valued and keep coming back.
+                  It&CloseCurlyQuote;s the best decision we&CloseCurlyQuote;ve
+                  made for our business, hands down!
+                </p>
+                <div class="flex items-center mt-10 md:mt-20 gap-8">
+                  <img
+                    src="../assets/images/testimonial-6.webp"
+                    alt="image of a restaurant owner"
+                    style="
+                      border-radius: 50%;
+                      height: 6rem;
+                      width: 6rem;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <div>
+                    <p class="font-bold text-[1.8rem]">Emily Davis</p>
+                    <p class="text-[1.5rem] text-gray-500">
+                      Owner of Sweet Treats Bakery
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button
+            aria-label="previous button"
+            class="absolute flex items-center justify-center right-24 bottom-[-4rem] bg-gray-100 px-4 py-3 rounded-full shadow-sm text-primary z-20"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button
+            aria-label="next button"
+            class="absolute flex items-center justify-center right-4 bottom-[-4rem] bg-primary px-4 py-3 rounded-full shadow-sm text-white z-20"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- blog section -->
+      <section class="max-w-[1280px] w-[90%] mx-auto py-28 md:py-40">
+        <h2
+          class="expletus-sans-bold text-center text-[3rem] lg:text-[4rem] w-full md:w-[70%] xl:w-[60%] mx-auto leading-snug mb-16 md:mb-20"
+        >
+          Stories Told
+        </h2>
+        <div
+          class="flex flex-wrap justify-center lg:justify-between items-center gap-x-10 gap-y-20"
+        >
+          <div class="w-full sm:w-[45%] lg:w-[31%] rounded-3xl">
+            <div>
+              <image
+                src="../assets/images/home-blog1.webp"
+                alt="image of a chef"
+              />
+            </div>
+            <h3 class="expletus-sans-bold text-3xl my-6">Working with us</h3>
+            <p>Work has become more remotely accepted</p>
+            <div class="text-primary flex items-center gap-2 mt-1">
+              <a href="../pages/index.html">Learn more</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+          </div>
+
+          <div class="w-full sm:w-[45%] lg:w-[31%] rounded-3xl">
+            <div>
+              <image
+                src="../assets/images/home-blog2.webp"
+                alt="image of a chef"
+              />
+            </div>
+            <h3 class="expletus-sans-bold text-3xl my-6">The Culture Within</h3>
+            <p>Work has become more remotely accepted</p>
+            <div class="text-primary flex items-center gap-2 mt-1">
+              <a href="../pages/index.html">Learn more</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+          </div>
+          <div class="w-full sm:w-[45%] lg:w-[31%] rounded-3xl">
+            <div>
+              <image
+                src="../assets/images/home-blog3.webp"
+                alt="image of a chef"
+              />
+            </div>
+            <h3 class="expletus-sans-bold text-3xl my-6">Hiring Process</h3>
+            <p>Work has become more remotely accepted</p>
+            <div class="text-primary flex items-center gap-2 mt-1">
+              <a href="../pages/index.html">Learn more</a>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- cta section -->
+      <section
+        class="max-w-[1280px] w-[90%] mx-auto mb-28 md:mb-40 bg-[#f4f3f3] py-20 px-4 rounded-3xl flex flex-col items-center justify-center"
+      >
+        <h2
+          class="expletus-sans-bold text-[3rem] lg:text-[4rem] w-full md:w-[50%] mx-auto leading-snug text-center"
+        >
+          Start your <span class="text-primary">business</span> journey with
+          foodie
+        </h2>
+        <p class="text-center w-full md:w-[70%] mx-auto pt-6">
+          We are as excited as you are and can&CloseCurlyQuote;t wait to show
+          what we have in store for you! Whenever you&CloseCurlyQuote;re ready,
+          click on the get started button, and we&CloseCurlyQuote;ll be happy to
+          walk you through the entire process.
+        </p>
+        <a
+          href="../pages/register.html"
+          class="slidebtn expletus-sans-medium px-12 py-3 rounded-full mt-10"
+        >
+          Get Started
+        </a>
+      </section>
+    </main>
+
+    <!-- Placeholder for Footer -->
+    <footer id="footer"></footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Login to your Foodie account to access your personalized dashboard."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Foodie - login</title>
+  </head>
+  <body>
+    <main
+      class="bg-image flex justify-center items-center py-4 px-4 md:px-10 w-full h-full overflow-auto"
+    >
+      <div
+        class="max-w-[1280px] w-[100%] z-10 flex justify-center md:justify-end"
+      >
+        <div
+          class="max-[350px]:mt-20 max-[500px]:mt-10 shadow-lg w-full sm:w-[50rem] flex flex-col justify-center md:justify-end bg-white rounded-3xl px-10 md:px-16 py-10"
+        >
+          <div class="flex flex-col items-center justify-center">
+            <a href="../pages/index.html">
+              <div class="flex gap-2 items-center">
+                <img
+                  src="../assets/images/foodie-logo.svg"
+                  alt="foodie app logo image"
+                  style="width: 4rem"
+                />
+                <p class="expletus-sans-bold text-3xl">foodie</p>
+              </div>
+            </a>
+            <h1
+              class="expletus-sans-bold text-[2.4rem] sm:text-5xl leading-tight mt-16 mb-6"
+            >
+              Login to your account
+            </h1>
+          </div>
+
+          <form class="mt-10">
+            <div>
+              <label class="text-gray-500" for="email">Email address</label>
+              <input
+                id="email"
+                class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
+                type="email"
+                required
+              />
+            </div>
+            <div class="mt-12 relative">
+              <label class="text-gray-500" for="password">Password</label>
+              <div
+                class="flex items-center outline-none border-b-[1.8px] border-black focus-within:border-primary"
+              >
+                <input
+                  id="password"
+                  class="w-full outline-none"
+                  type="password"
+                  required
+                />
+                <button
+                  type="button"
+                  class="absolute right-0 pr-2 text-xl w-5 h-5 flex items-center justify-center"
+                  id="toggle-password"
+                  aria-label="Toggle Password Visibility"
+                >
+                  <i class="fas fa-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+            <p class="text-right underline mt-4 mb-8">Forgot Password?</p>
+            <button
+              type="submit"
+              class="slidebtn form-hvr expletus-sans-regular px-14 py-[0.7rem] rounded-full w-full mt-4"
+            >
+              Login
+            </button>
+          </form>
+          <p class="mt-16 text-center">
+            Don&CloseCurlyQuote;t have an account?
+            <span
+              ><a class="text-primary underline" href="../pages/register.html"
+                >Sign up</a
+              ></span
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

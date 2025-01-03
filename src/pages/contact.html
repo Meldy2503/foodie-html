@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with the Foodie team. We are here to help with questions, inquiries, and feedback."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Foodie - contact page</title>
+  </head>
+  <body>
+    <!-- page loading spinner -->
+    <div
+      id="spinner"
+      class="fixed top-0 left-0 w-full h-full bg-secondary flex justify-center items-center z-[9999]"
+    >
+      <div class="w-24 md:w-32">
+        <image src="../assets/images/loading.gif" alt="page loading spinner" />
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-secondary fixed top-0 w-full z-50">
+      <nav
+        class="flex justify-between items-center py-6 max-w-[1280px] w-[90%] m-auto"
+      >
+        <a href="../pages/index.html">
+          <div class="flex gap-2 items-center">
+            <div class="w-[3.5rem] md:w-[4rem]">
+              <img
+                src="../assets/images/foodie-logo.svg"
+                alt="foodie app logo image"
+              />
+            </div>
+            <p class="expletus-sans-bold text-4xl">foodie</p>
+          </div>
+        </a>
+        <div
+          class="nav-menu bg-secondary lg:bg-inherit w-[65%] flex items-center justify-between n py-10 lg:py-0"
+        >
+          <ul class="flex flex-col lg:flex-row gap-8 lg:gap-14">
+            <li><a class="nav-link" href="../pages/about.html">About Us</a></li>
+            <li>
+              <a class="nav-link" href="../pages/pricing.html">Pricing</a>
+            </li>
+            <li>
+              <a class="nav-link" href="../pages/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 n py-10 lg:py-0">
+            <a
+              href="../pages/login.html"
+              class="expletus-sans-regular text-[1.45rem] px-10 py-2 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Login
+            </a>
+            <a
+              href="../pages/register.html"
+              class="expletus-sans-regular text-[1.45rem] px-8 lg:px-5 py-2 border-[1.5px] text-white border-primary bg-primary rounded-full transition-all duration-300 ease-in-out hover:bg-secondary hover:text-primary"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section class="bg-secondary pt-32 relative">
+        <div
+          class="flex flex-col items-start md:flex-row justify-between gap-6 max-w-[1280px] w-[90%] mx-auto"
+        >
+          <div class="w-full min-[960px]:w-[48%] pt-16 min-[960px]:pt-36 pb-28">
+            <p class="font-semibold text-2xl">CONTACT US</p>
+            <h1
+              class="expletus-sans-bold text-[3rem] lg:text-[4rem] leading-tight my-6"
+            >
+              We love hearing from you!
+            </h1>
+            <p class="w-full md:w-[90%]">
+              This is the place to start. Find the answers you need from the
+              foodie Community or our award-winning support team.
+            </p>
+
+            <div
+              class="flex gap-6 mt-16 items-center text-[1.3rem] sm:text-[1.5rem]"
+            >
+              <div class="bg-lightSecondary p-6 w-[11rem] rounded-md">
+                <image
+                  src="../assets/images/help.svg"
+                  alt="help icon"
+                  style="width: 3rem"
+                />
+                <p class="text-[1.4rem] mt-4">
+                  Help <br />
+                  center
+                </p>
+              </div>
+              <div class="bg-lightSecondary p-6 w-[11rem] rounded-md">
+                <image
+                  src="../assets/images/handshake.svg"
+                  alt="icon showing two hands joined together"
+                  style="width: 3.2rem"
+                />
+                <p class="text-[1.4rem] mt-4">
+                  Customer <br />
+                  support
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden min-[960px]:block w-[48%] absolute right-0 top-20 pt-10"
+          >
+            <div class="z-20">
+              <image
+                src="../assets/images/contact-img.webp"
+                alt="image of a customer care representative"
+              />
+            </div>
+            <div
+              class="absolute left-20 lg:left-40 mt-[-5rem] z-[-1] w-[25rem]"
+            >
+              <image
+                src="../assets/images/pattern.svg"
+                alt="image of a colourful pattern"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact form section -->
+      <section class="max-w-[1280px] w-[90%] mx-auto">
+        <div class="w-full min-[960px]:w-[48%] pt-24 md:pt-36 pb-24 md:pb-28">
+          <h1
+            class="expletus-sans-bold text-[3rem] lg:text-[4rem] leading-tight my-6"
+          >
+            Join our ever growing workforce
+          </h1>
+          <p class="w-full md:w-[90%]">
+            We&CloseCurlyQuote;re always looking for hard-working, passionate
+            people to help us make commerce better.
+          </p>
+
+          <form class="flex flex-col gap-10 pb-20">
+            <div class="flex flex-col sm:flex-row gap-6 justify-between mt-10">
+              <div class="w-full md:w-[45%]">
+                <label class="text-gray-500" for="first-name"
+                  >First name *</label
+                >
+                <input
+                  id="first-name"
+                  class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="w-full md:w-[45%]">
+                <label class="text-gray-500" for="last-name">Last name *</label>
+                <input
+                  id="last-name"
+                  class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
+                  type="text"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label class="text-gray-500" for="email">Email address *</label>
+              <input
+                id="email"
+                class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
+                type="email"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-gray-500" for="phone">Phone number</label>
+              <input
+                id="phone"
+                class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
+                type="number"
+              />
+            </div>
+            <div>
+              <label class="text-gray-500" for="message"
+                >How can we help? *</label
+              >
+              <textarea
+                id="message"
+                class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="slidebtn form-hvr expletus-sans-regular px-14 py-[0.7rem] rounded-full w-full min-[450px]:w-1/2 mt-4"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder for Footer -->
+    <footer id="footer"></footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
