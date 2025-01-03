@@ -1,0 +1,376 @@
+@font-face {
+  font-family: "Proxima-bold";
+  src: url("../assets/fonts/ProximaNovaA-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Proxima-semibold";
+  src: url("../assets/fonts/ProximaNovaA-Semibold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Proxima-regular";
+  src: url("../assets/fonts/ProximaNovaA-Regular.woff") format("woff");
+  font-weight: 500;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-size: 1.6rem;
+  font-family: "Proxima-regular", sans-serif;
+}
+
+.expletus-sans-bold {
+  font-family: "Expletus Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.expletus-sans-medium {
+  font-family: "Expletus Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.expletus-sans-regular {
+  font-family: "Expletus Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --tasks: 3;
+  --taskTopPadding: 1.5rem;
+  --taskMargin: 4vw;
+  --stackGap: 1rem;
+}
+
+#task1 {
+  --index: 1;
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+#task2 {
+  --index: 2;
+  width: 99%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+#task3 {
+  --index: 3;
+  margin-bottom: 2rem;
+}
+
+.task {
+  position: sticky;
+  top: calc(7rem + (var(--index) * var(--stackGap)));
+}
+
+.task-body {
+  transition: all 0.5s;
+}
+
+.bg {
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.6));
+}
+
+.nav-link {
+  padding-bottom: 0.5rem;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-link::before {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0.4);
+  background-color: transparent;
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+  background-color: #db1a3a;
+  border-radius: 50%;
+}
+
+/* When navbar is scrolled */
+.scrolled {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.scrolled .logo-text {
+  color: black;
+}
+
+.scrolled .nav-link {
+  color: black;
+}
+
+.scrolled .login-btn {
+  color: #e01b3c;
+  border: 1.5px solid #e01b3c;
+  transition: all 0.3s ease;
+}
+
+.scrolled .login-btn:hover {
+  color: white;
+  background-color: #e01b3c;
+}
+
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin: 4.5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.bar.homebar {
+  background-color: white;
+}
+
+.scrolled .bar {
+  background-color: black;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(to bottom, #f1608a, #dba5ab, #da3847);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+table i {
+  font-size: 2rem;
+  color: #da3847;
+}
+
+table span {
+  margin-top: 1rem;
+}
+
+table th {
+  padding: 1rem;
+  font-family: "Expletus Sans", cursive;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+table th span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+table th:nth-child(1) {
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+td,
+th {
+  color: #181827;
+  border: 1px solid #d0d0d0;
+}
+
+tr:nth-child(odd) {
+  border-bottom: 1px solid #d0d0d0;
+}
+
+td:nth-child(1) {
+  text-align: left;
+  padding: 1rem 2rem;
+  width: 40%;
+  font-weight: 600;
+  line-height: 1.5;
+}
+td:nth-child(1) span {
+  font-weight: normal;
+  color: #181827;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+  width: 20%;
+}
+
+.about-img {
+  border-radius: 2rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 960px) {
+  .about-img {
+    height: 40rem;
+  }
+}
+
+.bg-image {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url("../assets/images/login-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* slide hover effect 1  */
+.btn-slide {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: 700;
+  border-radius: 3rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.btn-slide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: #fff;
+  z-index: -1;
+  transition: left 0.3s ease;
+}
+
+.btn-slide:hover {
+  color: #db1a3a;
+}
+
+.btn-slide:hover::before {
+  left: 0;
+}
+
+/* slide hover effect 2 */
+.slidebtn {
+  color: #fff;
+  border: 2px solid #201a21;
+  font-weight: bold;
+  background-image: -webkit-linear-gradient(
+    30deg,
+    #201a21 15.03%,
+    #201a21 34.34%,
+    transparent 50%
+  );
+  background-image: linear-gradient(
+    150.31deg,
+    #201a21 15.03%,
+    #201a21 35.34%,
+    transparent 50%
+  );
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.slidebtn:hover {
+  background-position: 100%;
+  color: #000;
+}
+
+.form-hvr {
+  background-size: 1200px;
+}
+
+/* slide hover effect 3 */
+.slidebtn2 {
+  border: 2px solid #db1a3a;
+  background-image: -webkit-linear-gradient(
+    30deg,
+    #db1a3a 15.03%,
+    #db1a3a 34.34%,
+    transparent 50%
+  );
+  background-image: linear-gradient(
+    150.31deg,
+    #db1a3a 15.03%,
+    #db1a3a 35.34%,
+    transparent 50%
+  );
+}
+.slidebtn2:hover {
+  color: #db1a3a;
+}
+
+
+
+
