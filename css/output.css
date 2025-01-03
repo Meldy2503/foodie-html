@@ -793,6 +793,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-\[-5rem\] {
   margin-top: -5rem;
 }
@@ -817,16 +821,16 @@ video {
   height: 1.25rem;
 }
 
+.h-\[90vh\] {
+  height: 90vh;
+}
+
 .h-auto {
   height: auto;
 }
 
 .h-full {
   height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .w-1\/2 {
@@ -1238,6 +1242,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1417,6 +1426,10 @@ video {
 
 .text-\[2rem\] {
   font-size: 2rem;
+}
+
+.text-\[3\.5rem\] {
+  font-size: 3.5rem;
 }
 
 .text-\[3rem\] {
@@ -1910,30 +1923,6 @@ td:nth-child(4) {
   border-color: rgb(224 27 60 / var(--tw-border-opacity, 1));
 }
 
-@media (max-width: 1024px) {
-  .max-\[1024px\]\:mt-10 {
-    margin-top: 2.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .max-\[500px\]\:mt-10 {
-    margin-top: 2.5rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .max-\[400px\]\:mt-20 {
-    margin-top: 5rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .max-\[350px\]\:mt-20 {
-    margin-top: 5rem;
-  }
-}
-
 @media (min-width: 450px) {
   .min-\[450px\]\:w-1\/2 {
     width: 50%;
@@ -1941,6 +1930,10 @@ td:nth-child(4) {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-\[10rem\] {
+    width: 10rem;
+  }
+
   .sm\:w-\[45\%\] {
     width: 45%;
   }
@@ -1966,6 +1959,11 @@ td:nth-child(4) {
     padding-right: 4rem;
   }
 
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1973,10 +1971,6 @@ td:nth-child(4) {
 
   .sm\:text-\[1\.5rem\] {
     font-size: 1.5rem;
-  }
-
-  .sm\:text-\[3\.5rem\] {
-    font-size: 3.5rem;
   }
 }
 
@@ -1991,6 +1985,10 @@ td:nth-child(4) {
     margin-bottom: 9rem;
   }
 
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .md\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -1999,16 +1997,24 @@ td:nth-child(4) {
     margin-bottom: 10rem;
   }
 
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .md\:h-screen {
+    height: 100vh;
   }
 
   .md\:w-32 {
     width: 8rem;
   }
 
-  .md\:w-\[30rem\] {
-    width: 30rem;
+  .md\:w-\[40rem\] {
+    width: 40rem;
   }
 
   .md\:w-\[45\%\] {
@@ -2087,10 +2093,6 @@ td:nth-child(4) {
     border-left-width: 55px;
   }
 
-  .md\:p-20 {
-    padding: 5rem;
-  }
-
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2099,6 +2101,11 @@ td:nth-child(4) {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:py-40 {
