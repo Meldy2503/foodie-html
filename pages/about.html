@@ -36,16 +36,6 @@
     <title>Foodie - about us page</title>
   </head>
   <body>
-    <!-- page loading spinner -->
-    <div
-      id="spinner"
-      class="fixed top-0 left-0 w-full h-full bg-secondary flex justify-center items-center z-[9999]"
-    >
-      <div class="w-24 md:w-32">
-        <image src="../assets/images/loading.gif" alt="page loading spinner" />
-      </div>
-    </div>
-
     <!-- Navbar -->
     <header class="bg-secondary fixed top-0 w-full z-50">
       <nav
@@ -75,18 +65,16 @@
             </li>
           </ul>
           <div class="flex flex-col lg:flex-row gap-8 lg:gap-4 n py-10 lg:py-0">
-            <a
-              href="../pages/login.html"
-              class="expletus-sans-regular text-[1.45rem] px-10 py-2 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
+            <button
+              class="open-login expletus-sans-regular text-[1.45rem] px-10 py-2 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all duration-300 ease-in-out"
             >
               Login
-            </a>
-            <a
-              href="../pages/register.html"
-              class="expletus-sans-regular text-[1.45rem] px-8 lg:px-5 py-2 border-[1.5px] text-white border-primary bg-primary rounded-full transition-all duration-300 ease-in-out hover:bg-secondary hover:text-primary"
+            </button>
+            <button
+              class="open-register expletus-sans-regular text-[1.45rem] px-8 lg:px-5 py-2 border-[1.5px] text-white border-primary bg-primary rounded-full transition-all duration-300 ease-in-out hover:bg-secondary hover:text-primary"
             >
               Get Started
-            </a>
+            </button>
           </div>
         </div>
         <div class="hamburger">
@@ -133,9 +121,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="w-full md:w-[48%] animate__animated animate__bounceInRight animate__delay-0.5s animate__repeat-1"
-          >
+          <div class="w-full md:w-[48%]">
             <image
               src="../assets/images/about-hero-img.webp"
               alt="image of a chef"
@@ -289,13 +275,33 @@
           powerful statement that guides everything we do. Including how we
           look, think and talk to the world.
         </p>
-        <a
-          href="../pages/register.html"
-          class="slidebtn slidebtn2 expletus-sans-medium text-[1.6rem] px-12 py-3 rounded-full"
+        <button
+          class="open-register slidebtn slidebtn2 expletus-sans-medium text-[1.6rem] px-12 py-3 rounded-full"
         >
           Join Now
-        </a>
+        </button>
       </section>
+      <!-- Placeholder for Login modal -->
+      <div
+        class="modal login-modal hidden fixed inset-0 bg-black bg-opacity-60 z-50 mx-auto p-0 sm:p-10 overflow-auto"
+      >
+        <div class="flex justify-center items-center h-full">
+          <div
+            class="bg-white rounded-3xl max-w-[1280px] w-[90%] mx-auto animate__animated animate__zoomIn animate__delay-0s animate__repeat-1"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Placeholder for register modal -->
+      <div
+        class="modal register-modal hidden fixed inset-0 bg-black bg-opacity-60 z-50 mx-auto p-0 sm:p-10 overflow-auto"
+      >
+        <div class="flex justify-center items-center h-full">
+          <div
+            class="bg-white rounded-3xl max-w-[1280px] w-[90%] mx-auto animate__animated animate__zoomIn animate__delay-0s animate__repeat-1"
+          ></div>
+        </div>
+      </div>
     </main>
 
     <!-- Placeholder for Footer -->

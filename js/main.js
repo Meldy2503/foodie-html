@@ -78,9 +78,68 @@ function loadFooter() {
       console.error("Error loading footer:", error);
     });
 }
-
 // Call the footer function
 loadFooter();
+
+// Function to open a modal and load its content
+async function openModal(modalClass, contentPath) {
+  // Initially Hide all modals
+  document.querySelectorAll(".modal").forEach((modal) => {
+    modal.classList.add("hidden");
+  });
+
+  const modal = document.querySelector(`.${modalClass}`);
+  if (!modal) return;
+
+  modal.classList.remove("hidden");
+
+  const contentContainer = modal.querySelector(".bg-white");
+  if (!contentContainer) return;
+
+  try {
+    const response = await fetch(contentPath);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const content = await response.text();
+    contentContainer.innerHTML = content;
+  } catch (error) {
+    console.error("Error loading modal content:", error);
+  }
+}
+
+function setupGlobalEventListeners() {
+  document.addEventListener("click", (event) => {
+    // Open register modal
+    if (event.target.matches(".open-register")) {
+      event.preventDefault();
+      openModal("register-modal", "./components/register.html");
+      openModal("register-modal", "../components/register.html");
+    }
+
+    // Open login modal
+    if (event.target.matches(".open-login")) {
+      event.preventDefault();
+      openModal("login-modal", "./components/login.html");
+      openModal("login-modal", "../components/login.html");
+    }
+
+    // Close modal when clicking outside
+    if (event.target.matches(".modal")) {
+      event.target.classList.add("hidden");
+    }
+
+    // Close modal when the close button is clicked
+    if (event.target.closest(".close-modal")) {
+      const modal = event.target.closest(".modal");
+      if (modal) {
+        modal.classList.add("hidden");
+      }
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupGlobalEventListeners();
+});
 
 // Slider functionality for the home page themes section
 const slider = document.getElementById("slider");
@@ -138,8 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   }
 });
-
-
 
 // Slider for the recommendation section
 function setupRecommendationSlider(sliderId) {
@@ -223,7 +280,7 @@ function setupRecommendationSlider(sliderId) {
 
   if (nextButton) {
     nextButton.addEventListener("click", () => slide("next"));
-  } 
+  }
 
   // Pause auto-sliding on hover
   slider.addEventListener("mouseenter", () => {
