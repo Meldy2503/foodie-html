@@ -135,14 +135,15 @@
           <div
             class="hidden min-[960px]:block w-[48%] absolute right-0 top-20 pt-10"
           >
-            <div class="z-20">
+            <div>
               <image
                 src="../assets/images/contact-img.webp"
                 alt="image of a customer care representative"
+                class="2xl:h-[115rem]"
               />
             </div>
             <div
-              class="absolute left-20 lg:left-40 mt-[-5rem] z-[-1] w-[25rem]"
+              class="absolute left-20 lg:left-40 mt-[-5rem] z-[-1] w-[25rem] 2xl:hidden"
             >
               <image
                 src="../assets/images/pattern.svg"
@@ -155,7 +156,9 @@
 
       <!-- Contact form section -->
       <section class="max-w-[1280px] w-[90%] mx-auto">
-        <div class="w-full min-[960px]:w-[48%] pt-24 md:pt-36 pb-24 md:pb-28 animate__animated animate__bounceInLeft animate__delay-1s animate__repeat-1">
+        <div
+          class="w-full min-[960px]:w-[48%] pt-24 md:pt-36 pb-24 md:pb-28 animate__animated animate__bounceInLeft animate__delay-1s animate__repeat-1"
+        >
           <h1
             class="expletus-sans-bold text-[3rem] lg:text-[4rem] leading-tight my-6"
           >
@@ -190,7 +193,9 @@
               </div>
             </div>
             <div>
-              <label class="text-gray-500" for="email-address">Email address *</label>
+              <label class="text-gray-500" for="email-address"
+                >Email address *</label
+              >
               <input
                 id="email-address"
                 class="border-b-[1.8px] w-full outline-none border-black focus:border-primary"
