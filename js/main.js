@@ -5,6 +5,7 @@ const navbar = document.getElementById("home-navbar");
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
+const navBtns = document.querySelectorAll(".nav-btn");
 
 // Scroll Event: Toggle class for navbar
 if (navbar) {
@@ -27,6 +28,13 @@ if (hamburger) {
 
 // Close Menu: When a nav link is clicked
 navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
+});
+// Close Menu: When a nav btn is clicked
+navBtns.forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
@@ -111,15 +119,13 @@ function setupGlobalEventListeners() {
     // Open register modal
     if (event.target.matches(".open-register")) {
       event.preventDefault();
-      openModal("register-modal", "./components/register.html");
-      openModal("register-modal", "../components/register.html");
+      openModal("register-modal", "/components/register.html");
     }
 
     // Open login modal
     if (event.target.matches(".open-login")) {
       event.preventDefault();
-      openModal("login-modal", "./components/login.html");
-      openModal("login-modal", "../components/login.html");
+      openModal("login-modal", "/components/login.html");
     }
 
     // Close modal when clicking outside

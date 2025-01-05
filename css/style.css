@@ -168,11 +168,13 @@ body {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 6rem;
+    top: 0;
     flex-direction: column;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: all 0.3s linear;
+    padding-top: 8rem;
+    
   }
 
   .nav-menu.active {
@@ -273,7 +275,7 @@ td:nth-child(4) {
 }
 
 .bg-image {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
     url("../assets/images/login-image.webp");
   background-size: cover;
   background-position: left;
