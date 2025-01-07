@@ -41,53 +41,22 @@ navBtns.forEach((link) => {
   });
 });
 
-// Password toggle functionality
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to handle password toggle
-  function setupPasswordToggle(passwordId, toggleButtonId) {
-    const passwordInput = document.getElementById(passwordId);
-    const toggleButton = document.getElementById(toggleButtonId);
+// Function to setup password toggles
+function setupPasswordToggle(passwordId, toggleButtonId) {
+  const passwordInput = document.getElementById(passwordId);
+  const toggleButton = document.getElementById(toggleButtonId);
 
-    if (toggleButton && passwordInput) {
-      toggleButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        const isPassword = passwordInput.type === "password";
-        passwordInput.type = isPassword ? "text" : "password";
-        toggleButton.innerHTML = isPassword
-          ? '<i class="fas fa-eye"></i>'
-          : '<i class="fas fa-eye-slash"></i>';
-      });
-    }
-  }
-  // Setup both password fields
-  setupPasswordToggle("password", "toggle-password");
-  setupPasswordToggle("confirm-password", "toggle-confirm-password");
-});
-
-// Function to load the footer
-function loadFooter() {
-  const footerElement = document.getElementById("footer");
-
-  // Check if the footer element exists before loading
-  if (!footerElement) {
-    return;
-  }
-  fetch("../components/footer.html")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to load footer");
-      }
-      return response.text();
-    })
-    .then((data) => {
-      document.getElementById("footer").innerHTML = data;
-    })
-    .catch((error) => {
-      console.error("Error loading footer:", error);
+  if (toggleButton && passwordInput) {
+    toggleButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      const isPassword = passwordInput.type === "password";
+      passwordInput.type = isPassword ? "text" : "password";
+      toggleButton.innerHTML = isPassword
+        ? '<i class="fas fa-eye"></i>'
+        : '<i class="fas fa-eye-slash"></i>';
     });
+  }
 }
-// Call the footer function
-loadFooter();
 
 // Function to open a modal and load its content
 async function openModal(modalClass, contentPath) {
@@ -98,9 +67,7 @@ async function openModal(modalClass, contentPath) {
 
   const modal = document.querySelector(`.${modalClass}`);
   if (!modal) return;
-
   modal.classList.remove("hidden");
-
   const contentContainer = modal.querySelector(".bg-white");
   if (!contentContainer) return;
 
@@ -109,6 +76,14 @@ async function openModal(modalClass, contentPath) {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const content = await response.text();
     contentContainer.innerHTML = content;
+
+    // Set up password toggles after content is loaded
+    if (modalClass === "login-modal") {
+      setupPasswordToggle("password", "toggle-password");
+    } else if (modalClass === "register-modal") {
+      setupPasswordToggle("register-password", "toggle-register-password");
+      setupPasswordToggle("confirm-password", "toggle-confirm-password");
+    }
   } catch (error) {
     console.error("Error loading modal content:", error);
   }
@@ -146,6 +121,31 @@ function setupGlobalEventListeners() {
 document.addEventListener("DOMContentLoaded", () => {
   setupGlobalEventListeners();
 });
+
+// Function to load the footer
+function loadFooter() {
+  const footerElement = document.getElementById("footer");
+
+  // Check if the footer element exists before loading
+  if (!footerElement) {
+    return;
+  }
+  fetch("../components/footer.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to load footer");
+      }
+      return response.text();
+    })
+    .then((data) => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch((error) => {
+      console.error("Error loading footer:", error);
+    });
+}
+// Call the footer function
+loadFooter();
 
 // Slider functionality for the home page themes section
 const slider = document.getElementById("slider");

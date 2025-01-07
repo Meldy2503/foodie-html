@@ -877,6 +877,10 @@ video {
   width: 48%;
 }
 
+.w-\[62\%\] {
+  width: 62%;
+}
+
 .w-\[65\%\] {
   width: 65%;
 }
@@ -1226,8 +1230,8 @@ video {
   --tw-bg-opacity: 0.6;
 }
 
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
 }
 
 .p-0 {
